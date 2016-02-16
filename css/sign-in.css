@@ -1,0 +1,229 @@
+@charset 'UTF-8';
+@font-face {
+	font-family:'FontAwesome';
+	src:url('font/fontawesome-webfont.eot?v=4.0.1');
+	src:url('font/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'),
+	url('font/fontawesome-webfont.woff?v=4.0.1') format('woff'),
+	url('font/fontawesome-webfont.ttf?v=4.0.1') format('truetype'),
+	url('font/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');
+	font-weight:normal;
+	font-style:normal
+}
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css");
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #161616;
+}
+
+body,textarea,select {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14pt;
+	font-weight: 300;
+	line-height: 1.75em;
+	color: white;
+}
+
+input {
+	color: black;
+}
+
+#content {
+	color: black;
+}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+#header {
+	position: relative;
+	background: url(../images/header.jpg) no-repeat bottom center;
+	background-attachment: fixed;
+	background-size: cover;
+	padding: 10em 0 6em 0;
+	min-height: 800px;
+	//text-align: center;
+}
+
+/*********************************************************************************/
+/* Nav                                                                           */
+/*********************************************************************************/
+
+#nav {
+	display: inline;
+}
+
+#nav-wrapper {
+	background: rgba(0,0,0,.1);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#nav > ul{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#nav > ul > li{
+	display: inline-block;
+	border-right: 1px solid;
+	border-color: rgba(255,255,255,.1);
+}
+
+#nav > ul > li:last-child {
+	padding-right: 0;
+	border-right: none;
+}
+
+#nav > ul > li > a,
+#nav > ul > li > span {
+	display: inline-block;
+	padding: 1.5em 1.5em;
+	letter-spacing: 0.06em;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	outline: 0;
+	color: #FFF;
+}
+
+#nav li.active a {
+	color: #FFF;
+}
+
+#nav > ul > li > ul {
+	display: none;
+}
+
+#navImage{
+	height: 30px;
+	width: 30px;
+}
+
+#signin-nav{
+	color: white;
+	float: right;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#sign-in-button{
+	color: white;
+}
+
+/*********************************************************************************/
+
+img{
+	max-width: 100px;
+	max-height: 100px;
+	border-radius: 50px;
+}
+
+.tweet-box{
+	border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+	border-color: green;
+	background-color: #E9EAEE;
+	margin-bottom: 3px;
+}
+
+#songList:hover{
+	color: red;
+}
+
+#likeButton:hover{
+	color: red;
+}
+
+#searchForm{
+	display: inline-block;
+}
+
+#searchBox{
+	width: 300px;
+}
+
+#username{
+	color: white;
+	float: right;
+	float: top;
+	//margin left: 500px;
+	padding-left: 350px;
+}
+
+/*********************************************************************************/
+
+
+
+#createAccount{
+	height: 150px;
+	background-color: green;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+}
+
+#createAccount h1{
+	text-align: center;
+	font-size: 50px;
+	color: white;
+}
+
+#createAccount img{
+	margin-top: 15px;
+	max-height: 50px;
+	text-align: center;
+}
+
+#instructions {
+	background:#E3E3E3;
+	border-radius:5px;
+	padding:10px;
+	max-height:300px;
+	overflow:auto;
+	margin-bottom:30px;
+}
+
+
+#postDate{
+	float: right;
+	margin-right: 30px;
+}
+
+
+
+
+
+/***************************************************ANIMATION*************************************************/
+.carddiv {
+width:150px; height:100px; position:relative;
+-webkit-transform-style: preserve-3d;
+-webkit-transform-origin: 100% 75px;
+-webkit-transition: all 0.7s ease;
+transform-style: preserve-3d;
+transform-origin: 100% 75px;
+transition: all 0.7s ease;
+}
+.container-fluid:hover .carddiv {
+-webkit-transform: rotateX(-180deg);
+transform: rotateX(-180deg);
+}
+.frontofcard, .backofcard {
+width:150px; height:100px; position:absolute; left:0; 
+-webkit-backface-visibility:hidden;
+backface-visibility:hidden;
+}
+.backofcard {
+-webkit-transform: rotateX(180deg);
+transform: rotateX(180deg);
+}
